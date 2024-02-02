@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.tablecontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(224, 222, 222);
+    border-radius: 10px;
+    margin: 20px;
+    flex-direction: column;
+}
+table{
+    width: 100%;
+    border-spacing: 0 15px;
+}
+select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+ option {
+    background-color: rgb(196, 194, 194);
+    padding: 10px;
+}
+
+th {
+    text-transform: capitalize;
+    text-align: left;
+  }
+  table tbody tr{
+    background-color: white;
+  }
+  table tbody tr td{
+    text-align: left;
+    padding: 10px;
+  }
+  table tbody .listtags {
+    width: 50%;
+  }
+  table tbody .listtags button{
+    line-height: 20px;
+    border: none;
+    padding: 10px;
+    background-color: #605BFF;
+    margin: 3px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width:800px) {
+    table tbody .listtags{
+        width: 200px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+  }

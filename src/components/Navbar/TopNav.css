@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.TopNav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+}
+
+.TopNav img{
+    width: 25px;
+    border-radius: 50%;
+}
+.TopNav button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.TopNav .iconbell{
+    color: gray;
+    cursor: pointer;
+}
+.TopNav .iconbell:hover{
+    color: #605BFF;
+}
+.TopNav button:hover{
+    background-color: #605BFF;
+    color: white;
+}

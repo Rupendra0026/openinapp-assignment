@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sideNav{
+    background-color: white;
+    padding: 30px;
+}
+.logopart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.logopart img{
+    width: 90px;
+}
+.optionsList{
+    margin-top: 30px;
+}
+.optionsList ul{
+    list-style: none;
+    line-height: 50px;
+}
+.optionsList ul li .item , .icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: gray;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+.optionsList ul li .item:hover{
+    p{
+        color: #605BFF;
+    }
+    .icons{
+        color: #605BFF;
+    }
+}
+
+.optionsList ul li .item:active{
+    border-bottom: 2px solid #605BFF;
+}
+

@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.UploadFile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.upload{
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    
+}
+.UploadForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    border: 2px dashed grey;
+}
+.UploadForm button{
+    width: 20%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #605BFF;
+    color: white;
+    border-radius: 10px;
+}
+.UploadForm button:hover{
+    background-color: #3730f6;
+}
+
+@media screen and (max-width:700px) {
+    .upload{
+        width: 80%;
+    }
+}
