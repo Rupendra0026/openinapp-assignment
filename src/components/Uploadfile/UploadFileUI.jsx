@@ -66,9 +66,12 @@ const UploadFile = () => {
               <>
                 <label>{file.name}</label>
                 {upload ? (
-                  <button onClick={handleButtonClick}>upload</button>
+                  <button onClick={handleButtonClick} style={{width:"50%"}}>upload</button>
                 ) : (
+                 <>
                   <label onClick={clearData} style={{color:"tomato"}}>remove</label>
+                  <button style={{width:"50%",filter:"blur(0.7px)"}}>upload</button>
+                 </>
                 )}
               </>
             ) : (
@@ -77,7 +80,7 @@ const UploadFile = () => {
                   Drop your excel sheet here{" "}
                   <a onClick={handleLabelClick}>Browse</a>
                 </label>
-                <button onClick={handleButtonClick}>upload</button>
+                <button onClick={handleButtonClick} style={{width:"50%"}}>upload</button>
               </>
             )}
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TableDataUI.css";
 import { FaCross, FaTimes, FaXbox } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
 
 const Table2 = (props) => {
   const { display } = props;
@@ -20,22 +21,27 @@ const Table2 = (props) => {
   console.log(display);
 
   const addToArray = (str, arr, index) => {
-    let updatedArray = [...arr, str];
-    const updatedIndex = index + 1;
-    display[updatedIndex][4] = updatedArray;
-    setData((prevData) => {
-      const updatedData = [...prevData];
+    if(arr.includes(str)){
+      toast.warn("Item already in the list")
+    }
+    else{
+      let updatedArray = [...arr, str];
+      const updatedIndex = index + 1;
+      display[updatedIndex][4] = updatedArray;
+      setData((prevData) => {
+        const updatedData = [...prevData];
+        if (
+          updatedData[updatedIndex] &&
+          Array.isArray(updatedData[updatedIndex][4])
+        ) {
+          updatedData[updatedIndex][4] = updatedArray;
+        }
+  
+        return updatedData;
+      });
+      // console.log(display);
+    }
 
-      if (
-        updatedData[updatedIndex] &&
-        Array.isArray(updatedData[updatedIndex][4])
-      ) {
-        updatedData[updatedIndex][4] = updatedArray;
-      }
-
-      return updatedData;
-    });
-    console.log(display);
   };
 
   const DelefromArray=(index,subIndex)=>{
@@ -61,6 +67,7 @@ const Table2 = (props) => {
   }
   return (
     <>
+    <ToastContainer/>
       {display && <h3 style={{ padding: "20px" }}>Uploads</h3>}
       {display && (
         <div className="tablecontent">

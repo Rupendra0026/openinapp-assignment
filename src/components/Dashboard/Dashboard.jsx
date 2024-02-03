@@ -18,7 +18,7 @@ const Dashboard = () => {
       header = "Upload CSV";
       break;
     default:
-      contentComponent = <div className="random"><h1>{val}</h1></div>;
+      contentComponent = <div className="random"><h3>{val}</h3></div>;
   }
 
   const updateContent = (value) => {
