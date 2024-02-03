@@ -4,6 +4,7 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./TopNav.css";
 import { FaBell } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const TopNav = () => {
@@ -17,14 +18,15 @@ const TopNav = () => {
       console.log(req);
       navigate("/");
     } catch (error) {
-      console.log(error.message);
+      toast.warn(error.message)
+      // console.log(error.message);
     }
   };
   useEffect(() => {
     setLoad(true);
     setTimeout(() => {
       if (auth?.currentUser?.email) {
-        console.log(auth?.currentUser?.photoURL);
+        // console.log(auth?.currentUser?.photoURL);
         setUser(auth);
       } else {
         navigate("/");

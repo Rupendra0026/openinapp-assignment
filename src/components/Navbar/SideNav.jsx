@@ -6,10 +6,7 @@ import {
   FaBook,
   FaCalendar,
   FaCube,
-  FaIcons,
   FaInvision,
-  FaMarkdown,
-  FaNotesMedical,
   FaSlidersH,
   FaTimes,
   FaUpload,
@@ -17,50 +14,49 @@ import {
 
 const SideNav = (props) => {
     const {updateContent,menu,setMenu}=props
-    console.log(menu,setMenu,updateContent)
   return (
     <>
-      <div className="sideNav">
+      <div className={"sideNav"}>
         <div className="logopart">
           <img src={logo} alt="" />
           {
-            menu&&menu ? <FaTimes onClick={()=> menu && setMenu(!menu)}/>:""
+            menu&&menu ? <FaTimes color="grey" onClick={()=> menu && setMenu(!menu)}/>:""
           }
         </div>
         <div className="optionsList">
           <ul>
             <li>
-              <div className="item" onClick={()=>updateContent("dashboard")}>
+              <div className="item" onClick={()=>{updateContent("dashboard");setMenu&&setMenu(!menu)}}>
                 <FaCube className="icons" /> <p>Dashboard</p>
               </div>
             </li>
             <li>
-              <div className="item" onClick={()=>updateContent("uploads")}>
+              <div className="item" onClick={()=>{updateContent("uploads");setMenu&&setMenu(!menu)}}>
                 <FaUpload className="icons"/> <p>Upload</p>
               </div>
             </li>
             <li>
-              <div className="item" onClick={()=>updateContent("invoice")}>
+              <div className="item" onClick={()=>{updateContent("invoice");setMenu&&setMenu(!menu)}}>
                 <FaInvision className="icons"/> <p>Invoice</p>
               </div>
             </li>
             <li>
-              <div className="item" onClick={()=>updateContent("schedule")}>
+              <div className="item" onClick={()=>{updateContent("schedule");setMenu&&setMenu(!menu)}}>
                 <FaBook className="icons"/> <p>Schedule</p>
               </div>
             </li>
             <li>
-              <div className="item" onClick={()=>updateContent("calender")}>
+              <div className="item" onClick={()=>{updateContent("calender");setMenu&&setMenu(!menu)}}>
                 <FaCalendar className="icons"/> <p>Calender</p>
               </div>
             </li>
             <li>
-              <div className="item" onClick={()=>updateContent("notification")}>
+              <div className="item" onClick={()=>{updateContent("notification");setMenu&&setMenu(!menu)}}>
                 <FaBell className="icons"/> <p>Notification</p>
               </div>
             </li>
             <li>
-              <div className="item" onClick={()=>updateContent("settings")}>
+              <div className="item" onClick={()=>{updateContent("settings");setMenu&&setMenu(!menu)}}>
                 <FaSlidersH className="icons"/> <p>Settings</p>
               </div>
             </li>

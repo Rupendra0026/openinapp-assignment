@@ -18,7 +18,7 @@ const Dashboard = () => {
       header = "Upload CSV";
       break;
     default:
-      contentComponent = <div>{val}</div>;
+      contentComponent = <div className="random"><h1>{val}</h1></div>;
   }
 
   const updateContent = (value) => {
@@ -33,14 +33,14 @@ const Dashboard = () => {
         
         {
           menu ? <div className="responsive">
-            <SideNav menu={menu} setMenu={setMenu}/>
+            <SideNav menu={menu} setMenu={setMenu} updateContent={updateContent}/>
           </div> :""
         }
         <div className="content">
           <div className="nav">
              <div className="mininav">
              {
-              menu!=true ?<FaBars size={"40px"} onClick={()=>setMenu(true)}/>:""
+              menu!=true ?<FaBars className="mininavIcon" onClick={()=>setMenu(true)}/>:""
              }
               <img src={logo2} alt="" width={"70%"} />
              </div>

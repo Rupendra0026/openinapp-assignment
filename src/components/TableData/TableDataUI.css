@@ -1,62 +1,119 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.tablecontent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(224, 222, 222);
-    border-radius: 10px;
-    margin: 20px;
-    flex-direction: column;
+
+.tablecontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(224, 222, 222);
+  border-radius: 10px;
+  margin: 20px;
+  flex-direction: column;
 }
-table{
-    width: 100%;
-    border-spacing: 0 15px;
+
+table {
+  width: 100%;
+  border-spacing: 0 15px;
 }
-select{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
+
+select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  padding: 5px;
 }
- option {
-    background-color: rgb(196, 194, 194);
-    padding: 10px;
+
+option {
+  width: 20px;
+  height: 10px;
+  background-color: rgb(237, 229, 229);
+  padding: 10px;
+}
+option:hover{
+  background-color: red;
 }
 
 th {
-    text-transform: capitalize;
-    text-align: left;
-  }
-  table tbody tr{
-    background-color: white;
-  }
-  table tbody tr td{
-    text-align: left;
-    padding: 10px;
-  }
-  table tbody .listtags {
-    width: 50%;
-  }
-  table tbody .listtags button{
-    line-height: 20px;
-    border: none;
-    padding: 10px;
-    background-color: #605BFF;
-    margin: 3px;
-    color: white;
-    border-radius: 10px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+table tbody tr {
+  background-color: white;
+}
+
+table tbody tr td {
+  text-align: left;
+  padding: 10px;
+}
+
+table tbody .listtags {
+  width: 50%;
+}
+
+table tbody .listtags button {
+  line-height: 20px;
+  border: none;
+  padding: 10px;
+  background-color: #605BFF;
+  margin: 3px;
+  color: white;
+  border-radius: 10px;
+} 
+.icon{
+  margin-left: 10px;
+  color: white;
+}
+@media screen and (max-width:850px) {
+  select {
+    padding: 2px;
   }
 
-  @media screen and (max-width:800px) {
-    table tbody .listtags{
-        width: 200px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-    }
+  table tbody .listtags button {
+    line-height: 10px;
+    padding: 5px;
+    margin: 1.5px;
   }
+}
+
+@media screen and (max-width:550px) {
+  table{
+    width: 100%;
+  }
+  .tablecontent{
+    overflow: hidden;
+    padding-left: 20px;
+  }
+  th{
+    padding-left: 20px;
+  }
+  table{
+    margin: 10px;
+    padding: 10px;
+    
+    overflow-x: scroll;
+    display: block;
+  }
+  .listtags{
+    /* background-color: #605BFF; */
+    /* padding: 0;
+    margin: 0;
+    height: 100px;
+    display: block;
+    overflow-y: scroll; */
+  }
+  .tablecontent{
+    border-radius: 0;
+  }
+  .icon{
+    margin-left: 5px;
+    color: white;
+    display: none;
+  }
+}

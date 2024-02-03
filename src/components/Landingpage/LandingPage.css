@@ -23,6 +23,17 @@
     padding: 50px;
 
 }
+.leftpart::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 44%;
+    width: 10%;
+    height: 100%;
+    background-color:  #F8FAFF;
+    transform: skewX(-4deg);
+    z-index: 0;
+}
 
 .leftpart img {
    align-self: flex-start;
@@ -44,6 +55,12 @@
     color: white;
     justify-content: space-between;
 }
+.connections ul li{
+    padding: 10px;
+}
+.connections ul li:hover{
+    border-bottom: 2px solid white;
+}
 
 .rightpart {
     width: 50%;
@@ -57,10 +74,20 @@
 .footerpart{
     display: none;
 }
+@media screen and (max-width:1100px) {
+    .leftpart::before{
+        width: 5%;
+        right: 46%;
+        transform: skewX(-2deg);
+    }
+}
 @media screen and (max-width:800px) {
     .landing{
         flex-direction: column;
         height: auto;
+    }
+    .leftpart::before{
+        display: none;
     }
     .leftpart{
         width: 100%;

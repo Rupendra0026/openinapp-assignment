@@ -10,7 +10,7 @@ const LandingPage = () => {
     <div className="leftpart" style={{backgroundColor:"#605BFF"}}>
         <img src={logo} alt="logo"/>
         <div className="heading">
-        <h1>Base</h1>
+        <h1>BASE</h1>
         </div>
         <div className="connections">
             <ul>

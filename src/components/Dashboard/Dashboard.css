@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.random{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+.random h1{
+    border-bottom: 4px solid #605BFF;
+    border-radius: 5px;
+}
 .nav{
     display: flex;
     align-items: center;
@@ -14,6 +24,7 @@
 .responsive{
     position: absolute;
     z-index: 10;
+    width: 100%;
 }
 .dashboard{
     background-color: #e7e7e8;
@@ -44,6 +55,16 @@
     gap: 10px;
     display: none;
 }
+.mininavIcon{
+    color: gray;
+}
+.mininavIcon:hover{
+    color: #605BFF;
+}
+.responsive{
+    transition: width 0.3s ease;
+    background-color: #605BFF;
+}
 @media screen and (max-width:1250px) {
     .dashboard .navbar{
         width: 20%;
@@ -53,7 +74,9 @@
     .mininav{
         display: flex;
     }
-
+    .mininav img{
+        width: 50%;
+    }
     .navbar{
         display: none;
     }

@@ -84,7 +84,7 @@ const UploadFile = () => {
         </div>
       </div>
       <div className="table">
-        <TableDataUI data={data}/>
+        <TableDataUI display={data}/>
       </div>
     </>
   );
