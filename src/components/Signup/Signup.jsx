@@ -60,10 +60,10 @@ const Signup = () => {
         data.email,
         data.password
       );
-      console.log(req);
+      // console.log(req);
       navigate("/dashboard");
     } catch (err) {
-      console.log(err.message);
+      // console.log(err.message);
       toast.warning(err.message);
     }
   };

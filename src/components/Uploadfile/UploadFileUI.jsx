@@ -26,7 +26,7 @@ const UploadFile = () => {
         const data = XLSX.read(e.target.result, { type: "binary" }).Sheets
           .Sheet1;
         const parsedData = XLSX.utils.sheet_to_json(data, { header: 1 });
-        console.log(parsedData);
+        // console.log(parsedData);
         setData(parsedData);
         setUpload(false);
       };

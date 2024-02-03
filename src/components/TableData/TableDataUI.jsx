@@ -18,7 +18,6 @@ const Table2 = (props) => {
     }
   };
   dataUpadte();
-  console.log(display);
 
   const addToArray = (str, arr, index) => {
     if(arr.includes(str)){
@@ -50,7 +49,7 @@ const Table2 = (props) => {
     console.log(display[updateindex][4][subIndex])
     display[updateindex][4][subIndex]=null
     let updatedArray=display[updateindex][4][subIndex]
-    console.log(updatedArray)
+    // console.log(updatedArray)
     setData((prevData) => {
         const updatedData = [...prevData];
   
@@ -89,7 +88,7 @@ const Table2 = (props) => {
                         <>
                           {cellIndex == 1 ? (
                             <td key={cellIndex}>
-                              <a href={{ cellData }}>{cellData}</a>
+                              <a href={{ cellData }} target="_blank">{cellData}</a>
                             </td>
                           ) : cellIndex == 3 ? (
                             <>
