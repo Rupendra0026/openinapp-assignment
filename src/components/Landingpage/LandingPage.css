@@ -124,7 +124,7 @@
         gap: 20%;
     }
     .footerpart ul li:hover{
-        background-color: 
+        border-bottom: 2px solid 
         #605BFF;
     }
 }
